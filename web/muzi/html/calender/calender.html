@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HUI </title>
+    <link rel="stylesheet" type="text/css" href="../../plugins/hui/css/hui.css" />
+    <link rel="stylesheet" type="text/css" href="../../plugins/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+</head>
+<body>
+<header class="hui-header">
+    <div id="hui-back"></div>
+    <h1>2018旺年台历</h1>
+</header>
+<section style="padding:20px 10px 0px 10px;">
+    <div class="hui-swipe" id="index-swipe-1">
+        <div class="hui-swipe-item"><img src="../../images/calender/calender-1.jpeg"/></div>
+        <div class="hui-swipe-item"><img src="../../images/calender/calender-2.jpeg"/></div>
+        <div class="hui-swipe-item"><img src="../../images/calender/calender-3.jpeg"/></div>
+        <div class="hui-swipe-item"><img src="../../images/calender/calender-4.jpeg"/></div>
+        <div class="hui-swipe-item"><img src="../../images/calender/calender-5.jpeg"/></div>
+    </div>
+    <div style="color: #9E9E9E; font-size: 12px; margin-top: 10px;">
+        超厚进口艺术卡纸 | 双面印刷 | 任意起止月份 | 可收纳20-40张照片
+    </div>
+</section>
+<section style="padding: 10px;">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>选择尺寸</legend>
+    </fieldset>
+    <div class="layui-btn-container" id="calender-style" style="margin-left: 30px">
+        <button class="layui-btn">横版20*16</button>
+        <button class="layui-btn layui-btn-primary">竖版14*22</button>
+    </div>
+
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>印刷工艺</legend>
+    </fieldset>
+    <div class="layui-btn-container" id="calender-color" style="margin-left: 30px">
+        <button class="layui-btn">四色印刷</button>
+        <button class="layui-btn layui-btn-primary">六色印刷</button>
+    </div>
+
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>纸张</legend>
+    </fieldset>
+    <div class="layui-btn-container" id="calender-paper" style="margin-left: 30px">
+        <button class="layui-btn">320g厚磅艺术纸</button>
+    </div>
+
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>书壳</legend>
+    </fieldset>
+    <div class="layui-btn-container" id="calender-bottom" style="margin-left: 30px">
+        <button class="layui-btn layui-btn-primary">幸运粉</button>
+        <button class="layui-btn layui-btn-primary">土豪金</button>
+        <button class="layui-btn">爵士褐</button>
+    </div>
+</section>
+<section style="padding: 10px;">
+    <hr class="layui-bg-green">
+    <div>
+        <span style="color: #009688; font-size: 32px;">￥58</span>
+        <span style="color: #009688;">/本</span>
+        <span style="float: right; margin-top: 20px; color: #d2d2d2; font-size: 12px;">月销量 14659</span>
+    </div>
+    <div></div>
+</section>
+<section style="padding: 10px; padding-top: 0px;">
+    <hr class="layui-bg-green">
+    <button class="layui-btn layui-btn-radius layui-btn-fluid" id="muzi-btn-submit">立即制作</button>
+</section>
+<script type="text/javascript" src="../../plugins/jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="../../plugins/hui/js/hui.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../plugins/hui/js/hui-swipe.js"></script>
+<script type="text/javascript" src="../../plugins/layui/layui.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var swipe = new huiSwipe('#index-swipe-1');
+        swipe.run();
+
+        layui.use(['layer'], function () {
+            var layer = layui.layer;
+
+            $('#calender-style > .layui-btn').on('click', function () {
+                $('#calender-style > .layui-btn').addClass('layui-btn-primary');
+                $(this).removeClass('layui-btn-primary');
+            });
+
+            $('#calender-color > .layui-btn').on('click', function () {
+                $('#calender-color > .layui-btn').addClass('layui-btn-primary');
+                $(this).removeClass('layui-btn-primary');
+            });
+
+            $('#calender-paper > .layui-btn').on('click', function () {
+                $('#calender-paper > .layui-btn').addClass('layui-btn-primary');
+                $(this).removeClass('layui-btn-primary');
+            });
+
+            $('#calender-bottom > .layui-btn').on('click', function () {
+                $('#calender-bottom > .layui-btn').addClass('layui-btn-primary');
+                $(this).removeClass('layui-btn-primary');
+            });
+        });
+
+        $('#muzi-btn-submit').on('click', function () {
+
+            /**
+             * Submit Product Data
+             */
+            window.location.href = './calender_create.html';
+
+        });
+
+    });
+</script>
+</body>
+</html>

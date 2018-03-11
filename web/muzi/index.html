@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>木子印品</title>
+    <link rel="stylesheet" type="text/css" href="./plugins/hui/css/hui.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <style type="text/css">
+        #index-img-header {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<header class="hui-header">
+    <h1>木子印品</h1>
+    <div id="hui-header-menu" onclick="showMenu()"></div>
+</header>
+<section style="padding:20px 10px 0px 10px;">
+    <div class="hui-swipe" id="index-swipe-1">
+        <div class="hui-swipe-item"><img src="./images/swipe-1.jpg"/></div>
+        <div class="hui-swipe-item"><img src="./images/swipe-2.jpg"/></div>
+        <div class="hui-swipe-item"><img src="./images/swipe-3.jpg"/></div>
+    </div>
+</section>
+<section class="hui-menu">
+    <div id="index-img-header">
+        <img src="./images/header.jpg" class="img-header" alt="header">
+    </div>
+    <div class="hui-list" style="margin-top:0; padding:20px;">
+        <ul>
+            <li>我的作品</li>
+            <li>我的购物车</li>
+            <li><a href="./user-info.html">用户中心</a></li>
+            <li>联系我们</li>
+            <li style="padding-top:30px;">
+                <button type="button" class="hui-button hui-button-large" onclick="closeMenu();">关闭菜单</button>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="hui-speed-dial">
+    <ul>
+        <a href="./weibo-book.html">
+            <li>
+                <div class="hui-speed-dial-icons">
+                    <span class="hui-icons hui-icons-msg"></span>
+                </div>
+                <div class="hui-speed-dial-text">
+                    微博书
+                </div>
+            </li>
+        </a>
+        <li>
+            <div class="hui-speed-dial-icons">
+                <span class="hui-icons hui-icons-swipe"></span>
+            </div>
+            <div class="hui-speed-dial-text">
+                QQ空间书
+            </div>
+        </li>
+        <li>
+            <div class="hui-speed-dial-icons">
+                <span class="hui-icons hui-icons-forum"></span>
+            </div>
+            <div class="hui-speed-dial-text">
+                微信书
+            </div>
+        </li>
+        <li>
+            <div class="hui-speed-dial-icons">
+                <span class="hui-icons hui-icons-water-fall"></span>
+            </div>
+            <div class="hui-speed-dial-text">
+                照片书
+            </div>
+        </li>
+        <a href="html/calender/calender.html">
+            <li>
+                <div class="hui-speed-dial-icons">
+                    <span class="hui-icons hui-icons-warn"></span>
+                </div>
+                <div class="hui-speed-dial-text">
+                    旺年台历
+                </div>
+            </li>
+        </a>
+        <li>
+            <div class="hui-speed-dial-icons">
+                <span class="hui-icons hui-icons-write"></span>
+            </div>
+            <div class="hui-speed-dial-text">
+                所有产品
+            </div>
+        </li>
+    </ul>
+</section>
+<footer style="position: relative; top: 20px; text-align: center; font-size: 10px; z-index: -1;">
+    木子印品 muzi_print copyright 2017-2018
+</footer>
+<script type="text/javascript" src="./plugins/hui/js/hui.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./plugins/hui/js/hui-swipe.js"></script>
+<script type="text/javascript" src="./plugins/jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var swipe = new huiSwipe('#index-swipe-1');
+        swipe.run();
+
+        hui(document).swipe(function (e) {
+            if (e === 'left') {
+                showMenu();
+            }
+        });
+
+    });
+
+    /**
+     * 显示侧滑菜单
+     */
+    function showMenu() {
+        hui.maskShow();
+        var menu = hui('.hui-menu').eq(0);
+        menu.addClass('hui-menu-show');
+        hui.maskTap(function () {
+            closeMenu();
+        });
+    }
+
+    /**
+     * 隐藏侧滑菜单
+     */
+    function closeMenu() {
+        var menu = hui('.hui-menu').eq(0);
+        menu.removeClass('hui-menu-show');
+        hui.maskHide();
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HUI </title>
+    <link rel="stylesheet" type="text/css" href="./plugins/hui/css/hui.css" />
+    <style rel="stylesheet" type="text/css">
+        .topTap{
+            height:55px;
+            padding-left: 1rem;
+            background-color: #ffffff;
+            border-top: solid 1px #A7A7A8;
+        }
+        .topTap p span{
+            font-size: 0.3rem;
+            color: #ED2D22;
+            padding-top: 0.2rem;
+        }
+        .topTap p .Num{
+            margin-left: 0.1rem;
+        }
+        .bre{
+            margin-top: 0.4rem;
+            font-size: 0.26rem;
+        }
+       .bre span a{
+           color: #999999;
+       }
+        .active{
+            color: #333333;
+        }
+        .content{
+            margin-bottom: 32px;
+            background: #fff;
+        }
+        section{
+            padding: 10px 4%;
+            box-sizing: border-box;
+        }
+        .Choice{
+            height: 30px;
+            border-bottom: solid 1px #A7A7A8;
+            float: none;
+        }
+        .Choice input{
+            margin-top: 10px;
+        }
+        .Choice div{
+            float: right;
+            width: 10%;
+            height: 1.8rem;
+            text-align: center;
+            font-size: initial;
+            margin-right: 5px;
+
+        }
+        .Choice div img{
+            width: 1.8rem;
+        }
+        .Choice span{
+            float: right;
+            font-size: initial;
+            color: #eee;
+            margin-top: 0.10rem;
+            width: 2%;
+        }
+        .img{
+            margin-top: 5px;
+            width: 30%;
+            float: left;
+            text-align: center;
+        }
+        .img img{
+            max-width: 100%;
+            max-height: 85px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 2px 3px rgba(0,0,0,0.15);
+
+        }
+        section .info-data{
+            margin-left: 33%;
+            margin-top: 5px;
+
+        }
+        section .info-data > li:first-of-type {
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .money {
+            color: red; float: right;
+            margin-left: 10px;
+        }
+        .grayLine{
+            height: 0.6rem;
+            width: 100%;
+            background-color: #efeff4;
+        }
+        .bottom{
+            padding: 5%;
+            position: fixed;
+            background: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            bottom: 0;
+        }
+        .bottom > a {
+            width: 34%;
+            position: absolute;
+            height: 100%;
+            color: #fff;
+            top: 0;
+            right: 0;
+            text-align: center;
+            background: #ED2D22;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<header class="hui-header">
+    <div id="hui-back"></div>
+    <h1>购物车</h1>
+</header>
+<div class="hui-wrap">
+    <div class="topTap">
+        <p>我的作品
+            <span class="Num">(1)</span>
+        </p>
+        <div class="bre">
+            <span><a href="#">会员中心></a></span>
+            <span><a href="#">我的作品></a></span>
+            <span class="active">购物车</span>
+        </div>
+    </div>
+    <div class="grayLine"></div>
+    <div class="content">
+        <section>
+            <div class="Choice">
+                    <input type="checkbox" value="商品号" name="商品" id="01" />
+
+                <div>
+                    <img src="./images/payment/delete.png">
+
+                </div>
+                <span>|</span>
+                <div>
+                    <img src="./images/payment/edit.png">
+
+                </div>
+
+            </div>
+            <div class="img">
+                <img alt="封面" src="./images/payment/theBrochure.jpg">
+
+            </div>
+            <ul class="info-data">
+                <li>产品名：。。。 <span class="money">28元</span></li>
+                <li >产品名+ID</li>
+            </ul>
+        </section>
+    </div>
+    <div class="grayLine"></div>
+</div>
+<footer id="hui-footer">
+    <div class="bottom">
+        <p>总计：<span style="color: red;">￥28.00</span>元</p>
+        <a href="#">去结算</a>
+
+    </div>
+</footer>
+<script type="text/javascript" src="./plugins/hui/js/hui.js" charset="UTF-8"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

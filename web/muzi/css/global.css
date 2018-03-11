@@ -1,0 +1,62 @@
+/*********************************
+*******Global Style Sheet*********
+**********************************/
+
+/******Default Style Clean********/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight:normal;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+/******Public Style Sheet********/
+.img-header {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.muzi-section {
+    padding: 10px;
+}
+
+.muzi-feb {
+    background: url("../images/calender/feb.gif") no-repeat center bottom;
+    background-size: 100%;
+}

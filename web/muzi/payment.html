@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HUI </title>
+    <link rel="stylesheet" type="text/css" href="./plugins/hui/css/hui.css" />
+    <style rel="stylesheet" type="text/css">
+        #upframe{
+            padding: 15px 5%;
+            height:130px;
+            border: 1px solid #A7A7A8;
+            margin-bottom: 12px;
+        }
+        #shop{
+            height: 103px;
+            padding: 0 5%;
+            margin-bottom: 12px;
+            background-color: #E3E3E3;
+        }
+        #shop > .img{
+           width: 16%;
+           position: absolute;
+           text-align: center;
+            margin-top: 13px;
+       }
+        #shop > .keysan{
+            text-align: right;
+            float: right;
+            margin-top: 13px;
+        }
+        #shop ul{
+            display: inline-block;
+            width: 58%;
+            margin-left: 19%;
+            margin-top: 13px;
+        }
+        #shop ul li{
+         margin-bottom: 5px;
+        }
+        .img > img{
+            max-width: 100%;
+            max-height: 100%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 2px 3px rgba(0,0,0,0.15);
+        }
+       .message{
+             width: 90%;
+            height: 45px;
+            margin: 0 5%;
+            border-bottom:1px solid #A7A7A8;
+        }
+        .bottom{
+            padding: 5%;
+            position: fixed;
+            background: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            bottom: 0;
+        }
+        .bottom > a {
+            width: 34%;
+            position: absolute;
+            height: 100%;
+            color: #fff;
+            top: 0;
+            right: 0;
+            text-align: center;
+            background: #ED2D22;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            padding-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<header class="hui-header">
+    <div id="hui-back"></div>
+    <h1>确定在线支付 </h1>
+</header>
+<div class="hui-wrap">
+    <div id="upframe">
+        <ul>
+            <li style="width: 50%; float: left; margin-bottom: 12px;">收货人：xxx</li>
+            <li style="width: 50%; float: right; margin-bottom: 12px;">11111123569</li>
+        </ul>
+       <div style="float: left; height: 100px;">
+           收货地址： 广西柳州一职校.................................................
+       </div>
+    </div>
+    <div id="shop">
+        <div class="img">
+        <img alt="封面"  src="./images/payment/theBrochure.jpg">
+        </div>
+        <ul>
+          <li>商品简介...................................</li>
+            <li>商品尺寸。。。。</li>
+        </ul>
+        <div class="keysan">
+            <p>￥价格</p>
+            <p>数量</p>
+        </div>
+    </div>
+    <ul  class="message">
+        <li style="width: 50%; float: left; margin-top: 10px;">递送方式：</li>
+        <li  class="hui-form-select" style="width: 26%; float: right; margin-top: 5px;">
+            <select name="e">
+                <option value="申通快递">申通快递</option>
+                <option value="顺丰速递">顺丰速递</option>
+            </select>
+        </li>
+
+    </ul>
+    <ul class="message">
+        买家留言：<input type="text" class="hui-input hui-input-clear" name="Leaving a message" placeholder="填写你的留言"/>
+    </ul>
+
+</div>
+<footer id="hui-footer">
+    <div class="bottom">
+        <p>共1件，总金额￥28.00元</p>
+        <a href="#">立即支付</a>
+
+    </div>
+
+</footer>
+<script type="text/javascript" src="./plugins/hui/js/hui.js" charset="UTF-8"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

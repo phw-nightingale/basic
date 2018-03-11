@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>木子印品</title>
+    <link rel="stylesheet" type="text/css" href="../../plugins/hui/css/hui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../plugins/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <style type="text/css">
+        .muzi-month {
+            width: 99.5%;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            border: 1px #9E9E9E dashed;
+        }
+
+        #muzi-month-container {
+            width: 100%;
+        }
+
+        .muzi-bg-add-img {
+            background: #EEEEEE url("../../images/add-img.png") no-repeat center center;
+        }
+
+        .muzi-month-img-container > img {
+            width: 100%;
+        }
+
+        .muzi-diy-container {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin: 0 auto;
+            background: #EEEEEE;
+        }
+
+        .muzi-border {
+            border: 1px #9E9E9E dashed;
+        }
+
+        #muzi-toolbar > img {
+            width: 48px;
+            height: 48px;
+        }
+    </style>
+</head>
+<body>
+<header class="hui-header">
+    <div id="hui-back"></div>
+    <h1>木子印品</h1>
+    <div id="hui-header-menu"></div>
+</header>
+<section class="layui-carousel" id="muzi-month-container" lay-filter="muzi-month-container">
+    <div carousel-item="">
+        <div>
+            <form id="muzi-title-form" action="" class="layui-form muzi-month">
+
+                <div class="muzi-bg-add-img" style="width: 100%; height: 320px; text-align: center; margin: 0 auto;">
+
+                </div>
+                <div style="padding: 10px;" id="muzi-title-container">
+                    <div class="muzi-border" style="width: 100%; height: 22px;" id="muzi-title-main">请输入标题</div>
+                    <div class="muzi-border" style="width: 240px; height: 14px; margin-top: 10px; font-size: 10px;"
+                         id="muzi-title-min">请输入副标题
+                    </div>
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-jan-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 31%; height: 100%;"></div>
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 31%; height: 100%;"></div>
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 31%; height: 100%;"></div>
+                </div>
+                <div class="muzi-month-img-container muzi-border" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/jan.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-feb-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 40%; height: 100%;"></div>
+                </div>
+                <div class="muzi-month-img-container muzi-border" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/feb.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-mar-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/mar.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-apr-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 100%; height: 100%;"></div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/apr.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-may-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/may.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-jun-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/jun.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-jul-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/jul.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-aug-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/aug.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-sep-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/sep.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-oct-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/oct.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+        <div>
+            <form id="muzi-nov-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/nov.gif" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+
+        <div>
+            <form id="muzi-dec-form" action="" class="layui-form muzi-month" style="height: 200px;">
+                <div class="muzi-diy-container">
+                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>
+                    <div class="layui-inline" style="width: 40%; height: 100%; background: #2D93CA;">
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>
+                    </div>
+                </div>
+                <div class="muzi-month-img-container" style="border: 1px #9E9E9E dashed;">
+                    <img src="../../images/calender/dec.png" alt="">
+                </div>
+                <input type="hidden" name="productId" value="">
+                <input type="hidden" name="page" value="0">
+            </form>
+        </div>
+    </div>
+</section>
+<section style="position: fixed; bottom: 37px; height: 80px; width: 100%; text-align: center;" id="muzi-toolbar">
+    <button type="button" style="margin-top: 10px;" class="layui-btn layui-btn-primary">选择模板</button>
+</section>
+<script type="text/javascript" src="../../plugins/layui/layui.js"></script>
+<script type="text/javascript" src="../../plugins/hui/js/hui.js"></script>
+<script type="text/javascript">
+    layui.use(['carousel', 'jquery', 'upload', 'layer'], function () {
+        var $ = layui.$;
+        var carousel = layui.carousel;
+        var upload = layui.upload;
+        var layer = layui.layer;
+
+        //默认台历样式模板
+        var calender_style_1 = '<div class="muzi-diy-container">\n' +
+            '                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 31%; height: 100%;"></div>\n' +
+            '                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 31%; height: 100%;"></div>\n' +
+            '                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 31%; height: 100%;"></div>\n' +
+            '                </div>';
+
+        var calender_style_2 = '<div class="muzi-diy-container">\n' +
+            '                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>\n' +
+            '                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 40%; height: 100%;"></div>\n' +
+            '                </div>';
+
+
+        var calender_style_3 = '<div class="muzi-diy-container">\n' +
+            '                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 55%; height: 100%;"></div>\n' +
+            '                    <div class="layui-inline" style="width: 40%; height: 100%;">\n' +
+            '                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>\n' +
+            '                        <div class="muzi-border muzi-bg-add-img" style="width: 100%; height: 50%;"></div>\n' +
+            '                    </div>\n' +
+            '                </div>';
+
+        var calender_style_4 = '<div class="muzi-diy-container">\n' +
+            '                    <div class="layui-inline muzi-border muzi-bg-add-img" style="width: 100%; height: 100%;"></div>\n' +
+            '                </div>';
+
+        var month_form_obj = '';
+        var diy_container = '';
+        /**
+         * 工作区居中
+         */
+        var height = -$('.muzi-month').height() / 2;
+        $('.muzi-month').css('margin-top', height + 'px');
+
+        var windowHeight = $(document).height();
+        carousel.render({
+            elem: '#muzi-month-container'
+            , arrow: 'always'
+            , width: '100%'
+            , height: windowHeight + 'px'
+            , autoplay: false
+        });
+
+        /**
+         * Bind title container Click Listener
+         */
+        $('#muzi-title-container').on('click', function () {
+            hui.prompt('请输入标题和副标题，用”/“隔开', ['取消', '确定'], function (e) {
+                if (e.length === 0) {
+                    layer.msg('内容不能为空   ');
+                    return false;
+                }
+                var content = e.split('/');
+                $('#muzi-title-main').html(content[0]);
+                $('#muzi-title-min').html(content[1]);
+            });
+        });
+
+        /**
+         * 上传按钮绑定事件
+         */
+        var menus = ['从手机相册中选择', '从已上传中选择'];
+        var cancel = '取消';
+
+        $('.muzi-bg-add-img').on('click', function () {
+            onImgUploadClick(this);
+        });
+
+        function onImgUploadClick(elem) {
+            hui.actionSheet(menus, cancel, function (e) {
+                if (e.index === 0) {
+
+                } else if (e.index === 1) {
+
+                }
+            });
+            var uploadIns = upload.render({
+                elem: '#hui-action-sheet li:first' //绑定元素
+                , url: '/upload/' //上传接口
+                , before: function (obj) {
+                    obj.preview(function (index, file, result) {
+                        var image = '<img src=' + result + '>';
+                        $(elem).html(image);
+                    });
+                }
+                , done: function (res) {
+                    //上传完毕回调
+                }
+                , error: function () {
+                    //请求异常回调
+                }
+            });
+        }
+
+        var style = ['样式一', '样式二', '样式三', '样式四'];
+        $('#muzi-toolbar > button').on('click', function () {
+            hui.actionSheet(style, '取消', function (e) {
+
+                switch (parseInt(e.index)) {
+                    case 0:
+                        diy_container.html(calender_style_1);
+                        break;
+                    case 1:
+                        diy_container.html(calender_style_2);
+                        break;
+                    case 2:
+                        diy_container.html(calender_style_3);
+                        break;
+                    case 3:
+                        diy_container.html(calender_style_4);
+                        break;
+                }
+                $('.muzi-bg-add-img').on('click', function () {
+                    onImgUploadClick(this);
+                });
+            });
+        });
+
+        $('#muzi-toolbar').hide();
+        /**
+         * 监听轮播切换时间
+         */
+        carousel.on('change(muzi-month-container)', function (obj) { //test1来源于对应HTML容器的 lay-filter="test1" 属性值
+            switch (obj.index) {
+                case 0:
+                    $('.hui-header h1').html('封面');
+                    $('#muzi-toolbar').hide();
+                    break;
+                case 1:
+                    $('.hui-header h1').html('一月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 2:
+                    $('.hui-header h1').html('二月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 3:
+                    $('.hui-header h1').html('三月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 4:
+                    $('.hui-header h1').html('四月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 5:
+                    $('.hui-header h1').html('五月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 6:
+                    $('.hui-header h1').html('六月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 7:
+                    $('.hui-header h1').html('七月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 8:
+                    $('.hui-header h1').html('八月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 9:
+                    $('.hui-header h1').html('九月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 10:
+                    $('.hui-header h1').html('十月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 11:
+                    $('.hui-header h1').html('十一月');
+                    $('#muzi-toolbar').show();
+                    break;
+                case 12:
+                    $('.hui-header h1').html('十二月');
+                    $('#muzi-toolbar').show();
+                    break;
+            }
+            month_form_obj = obj.item[0];
+            var diy = $(month_form_obj).children('.muzi-diy-container').context.firstElementChild;
+            diy_container = $(diy).children('.muzi-diy-container');
+        });
+
+        var menus2 = ['保存'];
+        var cancel2 = '取消';
+        hui('#hui-header-menu').click(function(){
+            hui.actionSheet(menus2, cancel2, function(e){
+                if (parseInt(e.index) === 0) {
+                    
+                }
+            });
+
+        });
+
+    });
+</script>
+</body>
+</html>

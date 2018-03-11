@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HUI </title>
+    <link rel="stylesheet" type="text/css" href="./plugins/hui/css/hui.css" />
+    <style  rel="stylesheet" type="text/css">
+        #rightButton{
+            right: 3px;
+            top: 5px;
+            width: 38px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            position: absolute;
+        }
+        #panel{
+            display:none;
+
+        }
+        .buttonnav{
+            height: 150px;
+            position: absolute;
+            bottom: 56px;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 0 10px;
+            transform: translateX(-10%);
+            top: 3rem;
+            right: 0;
+            z-index: 220;
+            box-shadow:0 3px 16px rgba(0,0,0,.25);
+        }
+        #panel ul li{
+            display: block;
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-bottom: solid 1px #A7A7A8;
+        }
+        .title{
+            height:55px;
+            padding-left: 1rem;
+            background-color: #ffffff;
+            border-top: solid 1px #A7A7A8;
+        }
+        .title p span{
+            font-size: 0.3rem;
+            color: #ED2D22;
+            padding-top: 0.2rem;
+        }
+        .title p .workNum {
+            margin-left: 0.1rem;
+        }
+       .ti{
+           margin-top: 0.4rem;
+           font-size: 0.26rem;
+        }
+        .ti span a{
+            color: #999999;
+        }
+       .active{
+           color: #333333;
+       }
+        .grayLine{
+            height: 0.6rem;
+            width: 100%;
+            background-color: #efeff4;
+        }
+        .topB{
+            height:120px;
+            padding-left: 1rem;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .topB img{
+            height: 65px;
+            width: 65px;
+            float: left;
+            margin-top: 0.9rem;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+        }
+        .topB div{
+            float: left;
+            margin-left: 0.9rem;
+            padding-top: 0.9rem;
+        }
+        .workName{
+            color: #333333;
+            width: 15rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .workDetail{
+            font-size: 0.26rem;
+            color: #999999;
+            margin-top: 0.6rem;
+
+        }
+        .workPage {
+            font-size: 0.26rem;
+            color: #999999;
+
+        }
+        .btoB{
+            overflow: hidden;
+        }
+        .btoB div{
+            float: left;
+            width: 24%;
+            height: 2.64rem;
+            text-align: center;
+            font-size: initial;
+        }
+        .btoB div img{
+            width: 1.52rem;
+            margin-top: 0.75rem;
+
+        }
+        .btoB span{
+            float: left;
+            font-size: initial;
+            color: #eee;
+            margin-top: 0.60rem;
+            width: 1%;
+        }
+    </style>
+</head>
+<body>
+<header class="hui-header">
+    <div id="hui-back"></div>
+    <h1>作品管理 </h1>
+    <div id="rightButton">
+        <button type="button" style="background-color: #FFFFFF;border: none;">
+       <span>
+           <img src="./images/payment/add.png" style="width: 35px; height: 35px;">
+       </span>
+        </button>
+    </div>
+</header>
+<div class="hui-wrap">
+    <div id="panel">
+        <ul class="buttonnav">
+            <li>台历</li>
+            <li>微博书</li>
+            <li>相册</li>
+            <li>宣传册</li>
+        </ul>
+    </div>
+    <div class="title">
+        <p>我的作品
+        <span class="workNum">(1)</span>
+            </p>
+        <div class="ti">
+            <span><a href="#">首页></a></span>
+            <span><a href="#">会员中心></a></span>
+            <span class="active">我的作品</span>
+        </div>
+    </div>
+    <div class="grayLine"></div>
+    <div class="topB">
+        <img src="./images/payment/theBrochure.jpg">
+        <div>
+            <p class="workName">《产品名+ID》</p>
+            <p class="workDetail">产品名：。。。。</p>
+            <p class="workPage">ID：168168</p>
+            <p class="workPage">页数：12</p>
+        </div>
+    </div>
+    <div class="btoB">
+        <div>
+            <img src="./images/payment/edit.png">
+
+        </div>
+        <span>|</span>
+        <div>
+            <img src="./images/payment/print.png">
+
+        </div>
+        <span>|</span>
+        <div>
+            <img src="./images/payment/share.png">
+        </div>
+        <span>|</span>
+        <div>
+            <img src="./images/payment/delete.png">
+            
+        </div>
+
+    </div>
+    <div class="grayLine"></div>
+
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="./plugins/hui/js/hui.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#rightButton").click(function () {
+            $("#panel").slideToggle("slow")
+
+        });
+    });
+
+</script>
+</body>
+</html>

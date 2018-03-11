@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HUI </title>
+    <link rel="stylesheet" type="text/css" href="./plugins/hui/css/hui.css" />
+    <style rel="stylesheet" type="text/css">
+        .banner{
+            height: 15rem;
+            background: url("./images/payment/contact .jpg")center center no-repeat;
+            background-size: 100%;
+            border-top: solid 1px #A7A7A8;
+
+        }
+        .grayLine{
+            height: 0.6rem;
+            width: 100%;
+            background-color: #efeff4;
+        }
+
+
+    </style>
+</head>
+<body>
+<header class="hui-header">
+    <div id="hui-back"></div>
+    <h1>联系我们 </h1>
+</header>
+
+<div class="hui-wrap">
+    <div class="banner"></div>
+    <div class="grayLine"></div>
+    <form style="margin:28px 10px;" class="hui-form" id="contact-form">
+        <div class="hui-form-items">
+            用户名：<input type="text" class="hui-input hui-input-clear" name="nickname" placeholder="请输入用户名" />
+        </div>
+        <div class="hui-form-items">
+            邮箱号：<input type="text" class="hui-input hui-input-clear" name="nickname" placeholder="请输入邮箱号" />
+        </div>
+        <div class="hui-form-items">
+            <div class="hui-form-items-title">你的留言内容</div>
+            <div class="hui-form-textarea">
+                <textarea placeholder="请输入留言内容..."></textarea>
+            </div>
+        </div>
+        <div class="hui-form-items" style="padding:5px;">
+            <button type="button" class="hui-button hui-primary hui-fr" id="submit-btn">提交</button>
+        </div>
+    </form>
+
+
+</div>
+<script src="./plugins/jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="./plugins/hui/js/hui.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#submit-btn').on('click', function () {
+            $.ajax({
+                url: 'http://localhost/users'
+                ,type: 'get'
+                ,dataType: 'json'
+                ,success: function (data) {
+                    console.log(data);
+                }
+            });
+        }) ;
+    });
+</script>
+</body>
+</html>
