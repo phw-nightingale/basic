@@ -10,7 +10,7 @@ window.server = 'http://print.muzi.com/';
 
 var muzi = {
 
-    path : 'http://localhost/',
+    host : 'http://localhost/',
 
     /**
      * Base AJAX
@@ -23,14 +23,14 @@ var muzi = {
             ,dataType: 'json'
             ,data: e['data']
             ,async: typeof e['async'] === 'undefined' ? false : e['async']
-            ,beforeSend: function (XHR) {
-                XHR.setRequestHeader('token', localStorage.getItem('token'))
+            ,beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem('token'));
             }
             ,success: typeof e['success'] !== 'undefined' ? e['success'] : function (data) {
                 layer.msg(data.message);
             }
             ,error: typeof e['error'] !== 'undefined' ? e['error'] : function (xhr, e, thrown) {
-                layer.msg(e);
+                layer.msg(thrown);
             }
         });
     },
@@ -129,8 +129,11 @@ var muzi = {
             ,success: success
         };
         muzi.ajax(e);
-    }
+    },
 
+    getBtnText : function (e) {
+
+    }
 
 
 };

@@ -4,6 +4,7 @@ namespace app\models;
 
 use app\controllers\BaseActiveController;
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "order_detail".
@@ -15,7 +16,7 @@ use Yii;
  * @property string $remark 备注（自动生成）
  * @property string $order_to 配送目的地
  */
-class OrderDetail extends BaseActiveController
+class OrderDetail extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -53,4 +54,5 @@ class OrderDetail extends BaseActiveController
             'order_to' => 'Order To',
         ];
     }
+
 }

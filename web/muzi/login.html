@@ -50,7 +50,6 @@
             var res = huiFormCheck('#muzi-login-form');
             //提交
             if(res){
-                console.log($('#muzi-login-form').serializeArray());
                 muzi.ajax({
                     url: server + 'users/login',
                     type: 'POST',

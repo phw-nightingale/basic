@@ -82,7 +82,13 @@
         swipe.run();
 
         layui.use(['layer'], function () {
+
             var layer = layui.layer;
+
+            var style = '横版20*16',
+                paper = '320g厚磅艺术纸',
+                color = '四色印刷',
+                bottom = '幸运粉';
 
             var btns_style = $('#calender-style > .layui-btn');
             var btns_color = $('#calender-color > .layui-btn');
@@ -92,52 +98,48 @@
             $(btns_style).on('click', function () {
                 $(btns_style).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
+                style = $(this).text();
             });
 
             $(btns_color).on('click', function () {
                 $(btns_color).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
+                color = $(this).text();
             });
 
             $(btns_paper).on('click', function () {
                 $(btns_paper).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
+                paper = $(this).text();
             });
 
             $(btns_bottom).on('click', function () {
                 $(btns_bottom).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
+                bottom = $(this).text();
             });
 
             $('#muzi-btn-submit').on('click', function () {
 
-                console.log(btns_style);
-                var style = getBtnValue(btns_style);
-                var color = getBtnValue(btns_color);
-                var paper = getBtnValue(btns_paper);
-                var bottom = getBtnValue(btns_bottom);
+
 
                 /**
                  * Submit Product Data
                  */
                 var data = {
-                    'name': '2018旺年台历',
-
+                    payment: 60,
+                    remark: style + ' | ' + color + ' | ' + paper + ' | ' + bottom,
+                    order_to: '成都'
                 };
-                muzi.post(server + 'products', );
+                muzi.post(window.server + 'order-details', data, function (data) {
+                    if (data.code === 200) {
+                        window.location.href = './calender-create.html';
+                    }
+                    layer.msg(data.message);
+                });
 
-                //window.location.href = 'calender-create.html';
 
             });
-
-            function getBtnValue(e) {
-                e.each(function () {
-                    if (!$(this).is('.layui-btn-primary')) {
-                        console.log($(this).text());
-                        return $(this).text();
-                    }
-                });
-            }
 
         });
 

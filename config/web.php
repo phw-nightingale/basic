@@ -63,8 +63,12 @@ $config = [
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => 'product'
+                    'controller' => 'product',
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'order-detail',
+                ]
             ],
         ],
 
