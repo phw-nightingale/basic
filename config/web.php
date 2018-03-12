@@ -61,6 +61,10 @@ $config = [
                         'POST login' => 'login',
                     ]
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'product'
+                ],
             ],
         ],
 
@@ -81,7 +85,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['127.0.0.1', '::1', '192.168.1.101'],
+        'allowedIPs' => ['127.0.0.1', '::1', '192.168.1.*', '192.168.0.*'],
     ];
 }
 

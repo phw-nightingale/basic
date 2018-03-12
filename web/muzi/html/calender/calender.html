@@ -72,6 +72,7 @@
     <button class="layui-btn layui-btn-radius layui-btn-fluid" id="muzi-btn-submit">立即制作</button>
 </section>
 <script type="text/javascript" src="../../plugins/jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="../../js/base.js"></script>
 <script type="text/javascript" src="../../plugins/hui/js/hui.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../../plugins/hui/js/hui-swipe.js"></script>
 <script type="text/javascript" src="../../plugins/layui/layui.js"></script>
@@ -83,33 +84,60 @@
         layui.use(['layer'], function () {
             var layer = layui.layer;
 
-            $('#calender-style > .layui-btn').on('click', function () {
-                $('#calender-style > .layui-btn').addClass('layui-btn-primary');
+            var btns_style = $('#calender-style > .layui-btn');
+            var btns_color = $('#calender-color > .layui-btn');
+            var btns_paper = $('#calender-paper > .layui-btn');
+            var btns_bottom = $('#calender-bottom > .layui-btn');
+
+            $(btns_style).on('click', function () {
+                $(btns_style).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
             });
 
-            $('#calender-color > .layui-btn').on('click', function () {
-                $('#calender-color > .layui-btn').addClass('layui-btn-primary');
+            $(btns_color).on('click', function () {
+                $(btns_color).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
             });
 
-            $('#calender-paper > .layui-btn').on('click', function () {
-                $('#calender-paper > .layui-btn').addClass('layui-btn-primary');
+            $(btns_paper).on('click', function () {
+                $(btns_paper).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
             });
 
-            $('#calender-bottom > .layui-btn').on('click', function () {
-                $('#calender-bottom > .layui-btn').addClass('layui-btn-primary');
+            $(btns_bottom).on('click', function () {
+                $(btns_bottom).addClass('layui-btn-primary');
                 $(this).removeClass('layui-btn-primary');
             });
-        });
 
-        $('#muzi-btn-submit').on('click', function () {
+            $('#muzi-btn-submit').on('click', function () {
 
-            /**
-             * Submit Product Data
-             */
-            window.location.href = './calender_create.html';
+                console.log(btns_style);
+                var style = getBtnValue(btns_style);
+                var color = getBtnValue(btns_color);
+                var paper = getBtnValue(btns_paper);
+                var bottom = getBtnValue(btns_bottom);
+
+                /**
+                 * Submit Product Data
+                 */
+                var data = {
+                    'name': '2018旺年台历',
+
+                };
+                muzi.post(server + 'products', );
+
+                //window.location.href = 'calender-create.html';
+
+            });
+
+            function getBtnValue(e) {
+                e.each(function () {
+                    if (!$(this).is('.layui-btn-primary')) {
+                        console.log($(this).text());
+                        return $(this).text();
+                    }
+                });
+            }
 
         });
 
