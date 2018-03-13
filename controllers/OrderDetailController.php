@@ -36,8 +36,7 @@ class OrderDetailController extends BaseActiveController
         } elseif (!$model->hasErrors()) {
             return [
                 'code' => 500,
-                'message' => $model->errors
-            ];
+                'message' => $model->errors];
         }
     }
 

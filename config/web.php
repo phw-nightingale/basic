@@ -19,6 +19,20 @@ $config = [
                 'application/json' => 'yii\web\JsonParser',
             ]
         ],
+        'response' => [
+            'class' => 'yii\web\Response',
+            'on beforeSend' => function ($event) {
+                $response = $event->sender;
+                $data = $response->data;
+                if ($data !== null) {
+                    $response->data = [
+                        'code' => isset($data['code']) ? $data['code'] : 200,
+                        'message' => isset($data['message']) ? $data['message'] : null,
+                        'data' => isset($data['data']) ? $data['data'] : $data
+                    ];
+                }
+            }
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

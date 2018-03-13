@@ -10,7 +10,7 @@ window.server = 'http://print.muzi.com/';
 
 var muzi = {
 
-    host : 'http://localhost/',
+    host : 'http://print.muzi.com/',
 
     /**
      * Base AJAX
@@ -65,75 +65,5 @@ var muzi = {
             ,success: success
         };
         muzi.ajax(e);
-    },
-
-    /**
-     * HTTP PUT
-     * @param url
-     * @param data
-     * @param success
-     */
-    put : function (url, data, success) {
-        var e = {
-            url: url
-            ,type: 'put'
-            ,data: data
-            ,success: success
-        };
-        muzi.ajax(e);
-    },
-
-    /**
-     * HTTP PATCH
-     * @param url
-     * @param data
-     * @param success
-     */
-    patch : function (url, data, success) {
-        var e = {
-            url: url
-            ,type: 'patch'
-            ,data: data
-            ,success: success
-        };
-        muzi.ajax(e);
-    },
-
-    /**
-     * HTTP DELETE
-     * @param url
-     * @param data
-     * @param success
-     */
-    delete : function (url, data, success) {
-        var e = {
-            url: url
-            ,type: 'delete'
-            ,data: data
-            ,success: success
-        };
-        muzi.ajax(e);
-    },
-
-    /**
-     * HTTP HEAD
-     * @param url
-     * @param data
-     * @param success
-     */
-    head : function (url, data, success) {
-        var e = {
-            url: url
-            ,type: 'head'
-            ,data: data
-            ,success: success
-        };
-        muzi.ajax(e);
-    },
-
-    getBtnText : function (e) {
-
     }
-
-
 };
