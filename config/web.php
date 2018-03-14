@@ -82,7 +82,14 @@ $config = [
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'order-detail',
-                ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'production',
+                    'extraPatterns' => [
+                        'POST upload' => 'upload',
+                    ]
+                ],
             ],
         ],
 

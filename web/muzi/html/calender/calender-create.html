@@ -345,17 +345,19 @@
             });
             var uploadIns = upload.render({
                 elem: '#hui-action-sheet li:first' //绑定元素
-                , url: '/upload/' //上传接口
+                , url: window.server + 'productions/upload' //上传接口
                 , before: function (obj) {
                     obj.preview(function (index, file, result) {
                         var image = '<img src=' + result + '>';
                         $(elem).html(image);
                     });
                 }
-                , done: function (res) {
+                , done: function (res, index, upload) {
                     //上传完毕回调
+                    console.log(res);
+                    layer.closeAll();
                 }
-                , error: function () {
+                , error: function (index, upload) {
                     //请求异常回调
                 }
             });
